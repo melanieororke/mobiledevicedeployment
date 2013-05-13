@@ -11,7 +11,7 @@ about this project, please feel free to contact me at <a href="mailto:melanieoro
 -----------------------------------------------------------------
 
 This project is built on Twitter's Bootstrap framework. All SQL tables will be built on my personal server (until told otherwise)
-and SQL updates will be recorded in the appropriate folder (sqlUpdates) for the purposes of this project. For all CSS, JS, or images, please look in the corresponding folders.
+and SQL updates will be recorded in the appropriate folder (sqlUpdates) for the purposes of this project. For all CSS, JS, or images, please look in the corresponding assets folder.
 
 The purpose of this app is to allow barn managers easy access to information about horses in their care. It will include 
 feed schedules, vetrinarian and farrier (horse shoeing) appointments as well as show and riding schedules. It will also

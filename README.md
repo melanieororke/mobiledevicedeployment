@@ -18,6 +18,16 @@ feed schedules, vetrinarian and farrier (horse shoeing) appointments as well as 
 have areas for notes about each horse from grooms, trainers and other individuals that may come in contact with the horse.
 
 ------------------------------------------------------------------
+
 Logo and Branding Information
 
 Horse Silhouette from All-Silhouettes.com's Vector Horses Pack. Can be downloaded <a href="http://all-silhouettes.com/vector-horses/" target="blank">here</a>.
+Font: Carter One Available from Google Web Fonts
+
+------------------------------------------------------------------
+
+SQL Information
+
+Database Name: abandond_easykeepr
+Username: easykee
+Password: easyKeepr./2013

@@ -22,7 +22,8 @@ have areas for notes about each horse from grooms, trainers and other individual
 Logo and Branding Information
 
 Horse Silhouette from All-Silhouettes.com's Vector Horses Pack. Can be downloaded <a href="http://all-silhouettes.com/vector-horses/" target="blank">here</a>.
-Font: Carter One Available from Google Web Fonts
+
+Fonts: Carter One and Lato: Available from Google Web Fonts
 
 ------------------------------------------------------------------
 

@@ -29,6 +29,6 @@ Fonts: Carter One and Lato: Available from Google Web Fonts
 
 SQL Information
 
-Database Name: abandond_easykeepr
-Username: easykee
-Password: easyKeepr./2013
+Database Name: abandond_easykeepr<br/>
+Username: easykee<br/>
+Password: easyKeepr./2013<br/>

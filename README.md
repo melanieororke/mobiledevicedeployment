@@ -37,6 +37,6 @@ Password: easyKeepr./2013<br/>
 
 Feel free to view the site through development on my server at:
 
-Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a>
+Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a><br/>
 Responsive: <a href="http://melanieororkedesign.com/easykeepr/responsive.php">
 http://melanieororkedesign.com/easykeepr/responsive.php</a>

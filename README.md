@@ -32,3 +32,11 @@ SQL Information
 Database Name: abandond_easykeepr<br/>
 Username: easykee<br/>
 Password: easyKeepr./2013<br/>
+
+------------------------------------------------------------------
+
+Feel free to view the site through development on my server at:
+
+Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a>
+Responsive: <a href="http://melanieororkedesign.com/easykeepr/responsive.php">
+http://melanieororkedesign.com/easykeepr/responsive.php</a>

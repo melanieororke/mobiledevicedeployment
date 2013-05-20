@@ -41,10 +41,10 @@ I have never written this kind of script before. I wanted something that was eas
 and understand, I also wanted something that was secure. I found a tutorial on how to set this up.
 You can find the tutorial <a href="http://forum.codecall.net/topic/69771-creating-a-simple-yet-secured-loginregistration-with-php5/">here</a>.
 
-Default Login information is:
+Default Login information is:<br/><br/>
 
-Username: Melanie
-Password: easyKeeper./2013
+Username: Melanie<br/>
+Password: easyKeeper./2013<br/><br/>
 
 Feel free to create your own login through my register form to help
 test the script.

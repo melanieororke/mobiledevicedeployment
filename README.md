@@ -39,7 +39,7 @@ Sign Up & Register Script Information
 
 I have never written this kind of script before. I wanted something that was easy to implement
 and understand, I also wanted something that was secure. I found a tutorial on how to set this up.
-You can find the tutorial <a href="http://forum.codecall.net/topic/69771-creating-a-simple-yet-secured-loginregistration-with-php5/">here</a>.
+You can find the tutorial <a href="http://www.rrpowered.com/tuts/2010/12/php-register-and-login-form/">here</a>.
 
 Default Login information is:<br/><br/>
 

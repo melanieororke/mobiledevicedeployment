@@ -30,8 +30,24 @@ Fonts: Carter One and Lato: Available from Google Web Fonts
 SQL Information
 
 Database Name: abandond_easykeepr<br/>
-Username: easykee<br/>
+Username: abandond_easykee<br/>
 Password: easyKeepr./2013<br/>
+
+------------------------------------------------------------------
+
+Sign Up & Register Script Information
+
+I have never written this kind of script before. I wanted something that was easy to implement
+and understand, I also wanted something that was secure. I found a tutorial on how to set this up.
+You can find the tutorial <a href="http://forum.codecall.net/topic/69771-creating-a-simple-yet-secured-loginregistration-with-php5/">here</a>.
+
+Default Login information is:
+
+Username: Melanie
+Password: easyKeeper./2013
+
+Feel free to create your own login through my register form to help
+test the script.
 
 ------------------------------------------------------------------
 

@@ -12,6 +12,7 @@
 					<input type="text" name="password" class="span5"/><br/>
 					<button class="btn btn-primary" type="submit" name="register" value="Register">Register</button>
 					</form>
+					<p><small>All fields are required.</small></p>
 				</div>
 				<div class="span6">
 					<h2 class="pink">Why Sign Up?</h2>

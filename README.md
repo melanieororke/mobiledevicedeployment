@@ -39,7 +39,7 @@ Sign Up & Register Script Information
 
 I have never written this kind of script before. I wanted something that was easy to implement
 and understand, I also wanted something that was secure. I found a tutorial on how to set this up.
-You can find the tutorial <a href="http://www.rrpowered.com/tuts/2010/12/php-register-and-login-form/">here</a>.
+You can find the tutorial <a href="http://gigaspartan.com/2010/11/26/how-to-build-a-full-featured-login-system/">here</a>.
 
 Default Login information is:<br/><br/>
 
@@ -54,5 +54,5 @@ test the script.
 Feel free to view the site through development on my server at:
 
 Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a><br/>
-Responsive: <a href="http://melanieororkedesign.com/easykeepr/responsive.php">
-http://melanieororkedesign.com/easykeepr/responsive.php</a>
+
+Please, check out the login scripts and other features in real time. Sign up for an account and go from there.

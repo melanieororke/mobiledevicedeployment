@@ -99,7 +99,7 @@
 												mysql_query("UPDATE `users` SET `online` = '".$time."' WHERE `id` = '".$_SESSION['uid']."'");
 
 												//redirect them to the usersonline page
-												header('Location: usersOnline.php');
+												header('Location: account.php?id='. $row['id'] .'');
 											}
 										}
 									}

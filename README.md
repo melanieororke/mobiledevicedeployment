@@ -71,4 +71,7 @@ There are three horses in the database, to view each one, simply change the "id"
 
 ------------------------------------------------------------------
 
+About the Copyright Notice
 
+I found a template that I used as the basis for my copyright information page. Please find the template
+<a href="http://www.seqlegal.com/free-legal-documents/copyright-notice">here</a>.

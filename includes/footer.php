@@ -1,9 +1,14 @@
     </div> <!-- /container -->
 <div class="container"><!--Container for footer-->
 	<div class="row">
-		<div class="span12">
+		<div class="span9">
 			<p class="copyright">Copyright &copy; 2013 Melanie O'Rorke | Designed and Developed for Mobile Device Deployment Course at Full Sail University<br/>
 				Easy Keepr is a fictitious site intended for educational purposes only.</p>
+		</div>
+		<div class="span3" align="right">
+			<p class="copyright">
+				<a href="copyright.php" style="color: #fff;">Copyright Info</a> | <a style="color: #fff;" href="help.php">Help</a>  |  <a style="color: #fff;" href="abuse.php">Report Abuse</a>  |  <a style="color: #fff;" href="contact.php">Contact Us</a>
+			</p>
 		</div>
 	</div>
 </div>

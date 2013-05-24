@@ -53,9 +53,22 @@ test the script.
 
 Feel free to view the site through development on my server at:
 
-Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a><br/>
+Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/</a>.<br/>
 
 Please, check out the login scripts and other features in real time. Sign up for an account and go from there.
 
+List Page:
+
 There is information in the database, to view an account with horses, health records and show schedules, login and go to this link:<br>
 <a href="http://melanieororkedesign.com/easykeepr/account.php?id=1">http://melanieororkedesign.com/easykeepr/account.php?id=1</a>
+
+Details Page:
+
+Not all users have horses, but all horses have details. To view a horse detail page, login and go to this page:<br/>
+<a href="http://melanieororkedesign.com/easykeepr/horsepage.php?id=3">http://melanieororkedesign.com/easykeepr/horsepage.php?id=3</a>
+
+There are three horses in the database, to view each one, simply change the "id" at the end of the url: id=3 to id=1
+
+------------------------------------------------------------------
+
+

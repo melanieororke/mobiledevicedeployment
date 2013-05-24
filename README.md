@@ -56,3 +56,6 @@ Feel free to view the site through development on my server at:
 Fixed: <a href="http://melanieororkedesign.com/easykeepr/">http://melanieororkedesign.com/easykeepr/responsive.php</a><br/>
 
 Please, check out the login scripts and other features in real time. Sign up for an account and go from there.
+
+There is information in the database, to view an account with horses, health records and show schedules, login and go to this link:<br>
+<a href="http://melanieororkedesign.com/easykeepr/account.php?id=1">http://melanieororkedesign.com/easykeepr/account.php?id=1</a>

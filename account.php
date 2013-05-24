@@ -4,9 +4,11 @@
 					<h1 class="pink" align="center">Welcome to Your Quick Look Index</h1>
 				</div>
 			</div><!-- /main headline-->
+			
 			<div class="row"><!--Row for HR-->
 				<div class="span12"><hr></div>
 			</div><!-- /row for HR -->
+			
 			<div class="row"><!-- Row for Features-->
 				<div class="span3"><!-- column one-->
 						<?php
@@ -20,13 +22,13 @@
 
 							//this is out update script which should be used in each page to update the users online time
 							$time = date('U')+50;
-							$update = mysql_query("UPDATE `users` SET `online` = '".$time."' WHERE `id` = '".$_SESSION['uid']."'");
+							$update = mysql_query("UPDATE users SET online = '". $time ."' WHERE id = '". $_SESSION['uid'] ."'");
 							?>
 							<h5 class="grey">Who's Online?</h5>
 							<?php
 
 							//select all rows where there online time is more than the current time
-							$res = mysql_query("SELECT * FROM `users` WHERE `online` > '".date('U')."'");
+							$res = mysql_query("SELECT * FROM users WHERE online > '". date('U') ."'");
 
 							//loop for each row
 							while($row = mysql_fetch_assoc($res)){
@@ -42,15 +44,36 @@
 						}
 
 						?>
-				</div><!-- / column one-->
-				<div class="span9"><!-- column two-->
+						<div class="well sidebar-nav">
+	            <ul class="nav nav-list">
+	              <li class="nav-header">Profile Manager</li>
+	              <li class="active"><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li class="nav-header">Horse Manager</li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li class="nav-header">Event Manager</li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	            </ul>
+	          </div><!--/.well -->
+				  </div><!-- / column one-->
+				  <div class="span9"><!-- column two-->
 						<h4 class="green">Your Horses</h4>
 						<?php
 						$owner = $_GET["id"];
 						$horseList = mysql_query("SELECT * FROM users,horses WHERE users.id = $owner AND horses.ownedBy = $owner ORDER BY horses.horseName ASC") or die(mysql_error());
-				    if ($row = (mysql_fetch_assoc($horseList))) {
+						$num_rows = mysql_num_rows($horseList);
+				    if($num_rows <= 0) {
 							echo '<h5 class="grey">Sorry, no horses found.</h5>';
-						}else{
+						} else {
 							echo '<table class="table table-striped table-bordered" width="100%">';
 		            echo '<tr>';
 		              echo '<th>Name</th>';
@@ -59,47 +82,72 @@
 		              echo '<th>Breed</th>';
 		              echo '<th>Gender</th>';
 		            echo '</tr>';
-						while ($row = (mysql_fetch_assoc($result))) {
+						while ($row = (mysql_fetch_assoc($horseList))) {
 							echo '<tr>';
 	              echo '<td>';
-	                echo '<a href="horsepage.php?id='. $row['id'] .'">'. stripslashes($row['name']) .'</a>';
+	                echo '<a href="horsepage.php?id='. $row['id'] .'">'. stripslashes($row['horseName']) .'</a>';
 	              echo '</td>';
 	              echo '<td>'. $row['yob'] .'</td>';
-	              echo '<td>'. $row['colour'] .' '. $row['pattern'] .'</td>';
+	              echo '<td>'. $row['color'] .' '. $row['pattern'] .'</td>';
 	              echo '<td>';
 	          				echo $row['breed'];
 	  	          echo '</td>';
 	              echo '<td>'. $row['gender'] .'</td>';
 	        echo '</tr>';
+        } // end while
 	      echo '</table>';
-	      } // end else
 						}
 						?>
 						<hr>
 						<h4 class="green">Upcoming Health Appointments</h4>
+						<?php
+						$health = mysql_query("SELECT * FROM healthRecords,horses,users WHERE users.id = $owner AND horses.ownedBy = $owner AND healthRecords.hid = $owner") or die(mysql_error());
+				    $num_rows_health = mysql_num_rows($health);
+				    if($num_rows_health <= 0) {
+							echo '<h5 class="grey">Sorry, no health information found.</h5>';
+						} else {
+							echo '<table class="table table-striped table-bordered" width="100%">';
+		            echo '<tr>';
+		              echo '<th>Name</th>';
+		              echo '<th>Vet Appointment</th>';
+		              echo '<th>Farrier Appointment</th>';
+		            echo '</tr>';
+						while ($row = (mysql_fetch_assoc($health))) {
+						  echo '<tr>';
+	              echo '<td>';
+	                echo '<a href="show.php?id='. $row['id'] .'">'. stripslashes($row['horseName']) .'</a>';
+	              echo '</td>';
+	              echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['nextvet'])) .'</td>';
+	              echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['nextshoe'])) .'</td>';
+	        echo '</tr>';
+        } // end while
+	      echo '</table>';
+						}
+						?>
 						<hr>
 						<h4 class="green">Upcoming Shows</h4>
 						<?php
-						$showList = mysql_query("SELECT * FROM shows ORDER BY showname ASC") or die(mysql_error());
-				    if ($row = (mysql_fetch_assoc($horseList))) {
+						$showList = mysql_query("SELECT * FROM shows WHERE id > 0 ORDER BY date ASC") or die(mysql_error());
+				    $num_rows_shows = mysql_num_rows($showList);
+				    if($num_rows_shows <= 0) {
 							echo '<h5 class="grey">Sorry, no shows found.</h5>';
-						}else{
+						} else {
 							echo '<table class="table table-striped table-bordered" width="100%">';
 		            echo '<tr>';
 		              echo '<th>Name</th>';
 		              echo '<th>Date</th>';
 		              echo '<th>Location</th>';
 		            echo '</tr>';
-						while ($row = (mysql_fetch_assoc($result))) {
+						while ($row = (mysql_fetch_assoc($showList))) {
 							echo '<tr>';
 	              echo '<td>';
-	                echo '<a href="show.php?id='. $row['id'] .'">'. stripslashes($row['name']) .'</a>';
+	                echo '<a href="show.php?id='. $row['id'] .'">'. stripslashes($row['showname']) .'</a>';
 	              echo '</td>';
-	              echo '<td>'. $row['date'] .'</td>';
-	              echo '<td>'. $row['Location'] .'</td>';
+	              echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['date'])) .'</td>';
+	              echo '<td>'. $row['location'] .'</td>';
 	        echo '</tr>';
+        } // end while
 	      echo '</table>';
-	      } // end else
 						}
 						?>
 				</div><!-- / column two-->

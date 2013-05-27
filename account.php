@@ -10,27 +10,7 @@
 			</div><!-- /row for HR -->
 			
 			<div class="row"><!-- Row for Features-->
-				<div class="span3"><!-- column one-->
-						<div class="well sidebar-nav">
-	            <ul class="nav nav-list">
-	              <li class="nav-header">Profile Manager</li>
-	              <li class="active"><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li class="nav-header">Horse Manager</li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li class="nav-header">Event Manager</li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	            </ul>
-	          </div><!--/.well -->
+				<?php include('includes/sidebar.php');?>
 						<?php
 
 						//if the login session does not exist therefore meaning the user is not logged in
@@ -52,7 +32,7 @@
 
 							//loop for each row
 							while($row = mysql_fetch_assoc($res)){
-								//echo  each username found to be online with a dash to split them
+								//echo  each username found to be online with a return to split them
 								echo $row['username']." <br/> ";
 							}
 
@@ -202,4 +182,4 @@
 				</div><!-- / column two-->
 			</div><!--/row for features-->
 			</div><!--/row for intro-->
-		<?php include('includes/footer.php');?>
+

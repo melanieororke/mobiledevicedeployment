@@ -22,6 +22,10 @@
 					echo $row['sire'] .' ';
 					echo ' x ';
 					echo $row['dam'] .' ';
+					echo '(';
+					echo $row['damsire'] .' ';
+					echo ')<br/> Bred by ';
+					echo $row['breeder'];
 					echo '</small</p>';
 				echo '</div>';
 			echo '</div>';  // end main headline
@@ -30,7 +34,8 @@
 			<div class="span12"><hr></div>
 			</div> <!--end HR--> 
 			<div class="row"><!-- Horse Info Row-->
-				<div class="span3">
+					<?php include('includes/sidebar.php');?>
+
 				</div>
 				<div class="span9">
 					<h2 class="green">Health Records</h2>

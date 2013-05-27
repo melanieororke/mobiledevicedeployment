@@ -11,6 +11,26 @@
 			
 			<div class="row"><!-- Row for Features-->
 				<div class="span3"><!-- column one-->
+						<div class="well sidebar-nav">
+	            <ul class="nav nav-list">
+	              <li class="nav-header">Profile Manager</li>
+	              <li class="active"><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li class="nav-header">Horse Manager</li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li class="nav-header">Event Manager</li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	              <li><a href="#">Link</a></li>
+	            </ul>
+	          </div><!--/.well -->
 						<?php
 
 						//if the login session does not exist therefore meaning the user is not logged in
@@ -44,28 +64,57 @@
 						}
 
 						?>
-						<div class="well sidebar-nav">
-	            <ul class="nav nav-list">
-	              <li class="nav-header">Profile Manager</li>
-	              <li class="active"><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li class="nav-header">Horse Manager</li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li class="nav-header">Event Manager</li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	              <li><a href="#">Link</a></li>
-	            </ul>
-	          </div><!--/.well -->
+						
 				  </div><!-- / column one-->
 				  <div class="span9"><!-- column two-->
+					<div class="row"><!--Dashboard Updates-->
+						<div class="span4"><!--Newest Horses-->
+							<h4 class="green">Newest Horses</h4>
+									<?php
+									$topHorse = mysql_query("SELECT * FROM horses ORDER BY id DESC LIMIT 5") or die(mysql_error());
+									$num_rows = mysql_num_rows($topHorse);
+							    if($num_rows <= 0) {
+										echo '<h5 class="grey">Sorry, no horses found.</h5>';
+									} else {
+										echo '<table class="table table-striped table-bordered" width="100%">';
+					            echo '<tr>';
+					              echo '<th>Name</th>';
+					            echo '</tr>';
+									while ($row = (mysql_fetch_assoc($topHorse))) {
+										echo '<tr>';
+				              echo '<td>';
+				                echo '<a href="horsepage.php?id='. $row['id'] .'">'. stripslashes($row['horseName']) .'</a>';
+											echo '</td>';
+				        echo '</tr>';
+			        } // end while
+				      echo '</table>';
+									}
+									?>
+							</div><!--/Newest Horses-->
+						<div class="span5"><!--Newest Events-->
+							<h4 class="green">Newest Events</h4>
+							<?php
+							$topHorse = mysql_query("SELECT * FROM shows ORDER BY id DESC LIMIT 5") or die(mysql_error());
+							$num_rows = mysql_num_rows($topHorse);
+					    if($num_rows <= 0) {
+								echo '<h5 class="grey">Sorry, no horses found.</h5>';
+							} else {
+								echo '<table class="table table-striped table-bordered" width="100%">';
+			            echo '<tr>';
+			              echo '<th>Name</th>';
+			            echo '</tr>';
+							while ($row = (mysql_fetch_assoc($topHorse))) {
+								echo '<tr>';
+		              echo '<td>';
+		                echo $row['showname'];
+									echo '</td>';
+		        echo '</tr>';
+	        } // end while
+		      echo '</table>';
+							}
+							?>
+						</div><!--/Newest Events-->
+					</div><!--/Dashboard Updates-->
 						<h4 class="green">Your Horses</h4>
 						<?php
 						$owner = $_GET["id"];

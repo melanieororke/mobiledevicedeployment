@@ -12,10 +12,10 @@
 				<li><a href="add_feed_form.php">Add Feed Instructions</a></li>
         <li><a href="editFeed.php">Edit Feed Instructions</a></li>
 				<li class="nav-header">Appointment Manager</li>
-        <li><a href="addAppointment.php">Add Appointment</a></li>
-        <li><a href="editAppointment.php">Edit Appointment</a></li>
+        <li><a href="add_vet_form.php">Add Health Appointment</a></li>
+        <li><a href="editVet.php">Edit Health Appointment</a></li>
         <li class="nav-header">Event Manager</li>
-        <li><a href="addEvent.php">Add Event</a></li>
+        <li><a href="add_event_form.php">Add Event</a></li>
         <li><a href="editEvent.php">Edit Event</a></li>
         <li><a href="viewEvents.php">View Events</a></li>
       </ul>

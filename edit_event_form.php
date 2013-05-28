@@ -3,11 +3,12 @@
     <tr>
       <td>                                
         <label for="showname">Event Name:</label>
-        <input type="text" name="showname" size="30" value="<?php echo $row['showname']; ?>" />
+        <input type="text" name="showname" size="30" value="<?php echo $row['showname']; ?>"/>
 				<label for="date">Date:</label>
         <input type="text" name="date" value="<?php echo $row['date']; ?>" size="30" />
 				<label for="location">Location: (City, State)</label>
         <input type="text" name="location" value="<?php echo $row['location']; ?>" size="30" />
+      </td>
       </td>
     </tr>
     <tr>

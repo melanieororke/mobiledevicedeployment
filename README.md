@@ -8,6 +8,13 @@ Design and Development Bachelors program. While the app is meant to be a fully f
 is a class project and is not intended for real world use at this time. If you have any questions, comments or concerns 
 about this project, please feel free to contact me at <a href="mailto:melanieororke@fullsail.edu">melanieororke@fullsail.edu</a>.
 
+
+Also please know that if this application was deployed in the real world, member profiles would not be included. Each stable/farm would 
+have their own copy of the application and it would not interact with others. The horse world is very competitive and sharing
+such things as health and feed records is generally not done. Imagine if your prize racehorse had a stone bruise and every 
+one in the world knew about it as soon as it happened. This would be incredible detrimental to the horse and the people
+associated with the horse. Some things don't need to be publicized, plus, there are plenty of social networks in the world.
+
 -----------------------------------------------------------------
 
 This project is built on Twitter's Bootstrap framework. All SQL tables will be built on my personal server (until told otherwise)

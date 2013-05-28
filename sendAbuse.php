@@ -1,16 +1,15 @@
 <?php
 /* Set e-mail recipient */
-$myemail  = "melanie.ororke@gmail.com";
+$myemail = "melanie.ororke@gmail.com";
 $subject = "Abuse at Easy Keepr";
 
 /* Check all form inputs using check_input function */
-$name = check_input($_POST['name'], "Please enter your name");
+$name     = check_input($_POST['name'], "Please enter your name");
 $email    = check_input($_POST['email']);
 $comments = check_input($_POST['message'], "Please enter a message");
 
 /* If e-mail is not valid show error message */
-if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
-{
+if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
     show_error("E-mail address not valid");
 }
 
@@ -36,13 +35,12 @@ header('Location: thanks.php');
 exit();
 
 /* Functions we used */
-function check_input($data, $problem='')
+function check_input($data, $problem = '')
 {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-    if ($problem && strlen($data) == 0)
-    {
+    if ($problem && strlen($data) == 0) {
         show_error($problem);
     }
     return $data;
@@ -50,11 +48,14 @@ function check_input($data, $problem='')
 
 function show_error($myError)
 {
-	
-};
+    
+}
+;
 
 ?>
 
     <div class="alert alert-error">
-    <?php echo $myError; ?>
+    <?php
+echo $myError;
+?>
 		</div>

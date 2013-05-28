@@ -1,4 +1,6 @@
-<?php include('includes/header.php');?>
+<?php
+include('includes/header.php');
+?>
 			<div class="row"><!--Row for Main Headline-->
 				<div class="span12">
 					<h1 class="pink" align="center">Copyright Information</h1>
@@ -38,4 +40,6 @@
 					<p>If you become aware of any material on our website that you believe infringes your or any other person's copyright, please report this by email to <a href="mailto:melanie.ororke@gmail.com">melanie.ororke@gmail.com</a>.</p>
 				</div>
 			</div><!--/row for Information-->
-		<?php include('includes/footer.php');?>
+		<?php
+include('includes/footer.php');
+?>

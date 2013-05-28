@@ -1,4 +1,6 @@
-<?php include('includes/header.php');?>
+<?php
+include('includes/header.php');
+?>
 			<div class="row"><!--Row for Main Headline-->
 				<div class="span12">
 					<h1 class="pink" align="center">Add A Horse</h1>
@@ -15,23 +17,23 @@
 
         <label for="yob">Birth Year: </label><select class="lists" name="yob" id="yob">
         <?php
-          $currentYear = date("Y")+1;
-          echo "<option value= '$currentYear'>$currentYear</option>";
-          $i = 0;
-          $newYear = $currentYear - 1;
-          while ($i < 30) {
-
-            if(isset($yearTemp)) {
-              echo "<option value= '$yearTemp'>$yearTemp</option>"; 
-              $yearTemp = $yearTemp - 1;
-              $i++;
-            } else { 
-              echo "<option value= '$newYear'>$newYear</option>"; 
-              $yearTemp = $newYear - 1;
-              $i++;
-            }
-          }
-        ?>
+$currentYear = date("Y") + 1;
+echo "<option value= '$currentYear'>$currentYear</option>";
+$i       = 0;
+$newYear = $currentYear - 1;
+while ($i < 30) {
+    
+    if (isset($yearTemp)) {
+        echo "<option value= '$yearTemp'>$yearTemp</option>";
+        $yearTemp = $yearTemp - 1;
+        $i++;
+    } else {
+        echo "<option value= '$newYear'>$newYear</option>";
+        $yearTemp = $newYear - 1;
+        $i++;
+    }
+}
+?>
         </select>
 
         <label for="gender">Gender:</label>

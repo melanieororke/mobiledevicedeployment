@@ -1,4 +1,6 @@
-<?php include('includes/header.php');?>
+<?php
+include('includes/header.php');
+?>
 <div class="row"><!--Row for Main Headline-->
 	<div class="span12">
 		<h1 class="pink" align="center">Terms of Service</h1>
@@ -43,4 +45,6 @@
 	</div>
 </div>
 
-<?php include('includes/footer.php');?>
+<?php
+include('includes/footer.php');
+?>

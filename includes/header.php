@@ -1,4 +1,6 @@
-<?php include('includes/dbConnect.php');?>
+<?php
+include('includes/dbConnect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +40,6 @@
 						<li><a href="feed.php">Feed Schedules</a></li>
 						<li><a href="feed.php">Health Records</a></li>
 						<li><a href="show.php">Show Schedules</a></li>
-						<li><a href="account.php">My Account</a></li>
 						<li>
 					</ul>
 				</div><!--End Nav Column-->

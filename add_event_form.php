@@ -1,4 +1,6 @@
-<?php include('includes/header.php');?>
+<?php
+include('includes/header.php');
+?>
 			<div class="row"><!--Row for Main Headline-->
 				<div class="span12">
 					<h1 class="pink" align="center">Add An Event</h1>

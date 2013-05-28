@@ -1,4 +1,6 @@
-<?php include('includes/header.php');?>
+<?php
+include('includes/header.php');
+?>
 <div class="row"><!--Row for Main Headline-->
 	<div class="span12">
 		<h1 class="pink" align="center">Report Abuse of Easy Keepr</h1>
@@ -25,7 +27,7 @@
 			<label>Your Name:</label>
 			<input type="text" name="name" placeholder="Your Name">
 			<label>Your Email:</label>
-			<input type="text" name="email" placeholder="me@yourdomain.com">
+			<input type="text" name="name" placeholder="me@yourdomain.com">
 			<label>Message:</label>
 			<textarea rows="4" name="message" id="message" class="span4"/></textarea><br/>
 			<button class="btn btn-primary" type="submit" name="submit">Report Abuse</button>
@@ -33,4 +35,6 @@
 		
 	</div>
 </div><!--End Row for Abuse Form-->
-<?php include('includes/footer.php');?>
+<?php
+include('includes/footer.php');
+?>

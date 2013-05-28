@@ -21,4 +21,6 @@
 
 </body>
 </html>
-<?php include('includes/dbClose.php');?>
+<?php
+include('includes/dbClose.php');
+?>

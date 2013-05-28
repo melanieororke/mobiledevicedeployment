@@ -56,7 +56,7 @@
 					  echo '<tr>';
               echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['lastvet'])) .'</td>';
               echo '<td><p>'. $row['details'] .'</p></td>';
-              echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['cogginsdate'])) .'<br/><p>Negative</p></td>';
+              echo '<td>'. strftime('%A <strong>%B %e</strong>, %Y', strtotime($row['cogginsdate'])) .'<br/><p>Negative: '. $row['cogginsneg'] .'</p></td>';
         echo '</tr>';
       } // end while
       echo '</table>';
@@ -67,7 +67,7 @@
 					$health = mysql_query("SELECT * FROM healthRecords,horses WHERE horses.id = $horse AND healthRecords.hid = $horse") or die(mysql_error());
 			    $num_rows_health = mysql_num_rows($health);
 			    if($num_rows_health <= 0) {
-						echo '<h5 class="grey">Sorry, no veterinarian information found.</h5>';
+						echo '<h5 class="grey">Sorry, no farrier information found.</h5>';
 					} else {
 						echo '<table class="table table-striped table-bordered" width="100%">';
 	            echo '<tr>';

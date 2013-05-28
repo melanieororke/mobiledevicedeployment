@@ -1,7 +1,7 @@
 <?php include('includes/header.php');?>
 			<div class="row"><!--Row for Main Headline-->
 				<div class="span12">
-					<h1 class="pink" align="center">Viewing All Member Profiles</h1>
+					<h1 class="pink" align="center">Edit A Horse</h1>
 				</div>
 			</div><!-- /main headline-->
 			
@@ -10,13 +10,13 @@
 			</div><!-- /row for HR -->
 			
 			<div class="row"><!-- Row for Features-->
-				<?php include('includes/sidebar.php');?>
-		
+				<?php include('includes/sidebar.php');?>						
 				  </div><!-- / column one-->
 				  <div class="span9"><!-- column two-->
+					<h3 class="green">Click member name to edit.</h3>
 						<?php
 						$owner = $_GET["id"];
-						$memberList = mysql_query("SELECT * FROM members ORDER BY lastname ASC") or die(mysql_error());
+						$memberList = mysql_query("SELECT * FROM members ORDER BY id ASC") or die(mysql_error());
 						$num_rows = mysql_num_rows($memberList);
 				    if($num_rows <= 0) {
 							echo '<h5 class="grey">Sorry, no members found.</h5>';
@@ -30,9 +30,9 @@
 						while ($row = (mysql_fetch_assoc($memberList))) {
 							echo '<tr>';
 	              echo '<td>';
-	                echo '<a href="profile.php?id='. $row['id'] .'">'. ($row['firstname']) .' '. ($row['lastname']) .'</a>';
+	                echo '<a href="edit_member.php?id='. $row['id'] .'">'. ($row['firstname']) .' '. ($row['lastname']) .'</a>';
 	              echo '</td>';
-	              echo '<td>'. $row['city'] .', '. $row['country'] .'</td>';
+	              echo '<td>'. $row['city'] .' '. $row['country'] .'</td>';
 	              echo '<td>';
 	          				echo $row['worksat'];
 	  	          echo '</td>';

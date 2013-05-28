@@ -10,7 +10,7 @@
         <li><a href="editHorse.php">Edit Horse</a></li>
         <li><a href="viewHorses.php">View Horses</a></li>
 				<li><a href="add_feed_form.php">Add Feed Instructions</a></li>
-        <li><a href="editfeed.php">Edit Feed Instructions</a></li>
+        <li><a href="editFeed.php">Edit Feed Instructions</a></li>
 				<li class="nav-header">Appointment Manager</li>
         <li><a href="addAppointment.php">Add Appointment</a></li>
         <li><a href="editAppointment.php">Edit Appointment</a></li>

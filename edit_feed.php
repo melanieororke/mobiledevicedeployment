@@ -16,11 +16,11 @@
 
     if ($findiderrors == 0) {
             // Get our fields already in the db, and compare, to decrease db updates
-            $sql = "SELECT * FROM members WHERE id=$id";
+            $sql = "SELECT * FROM feed WHERE id=$id";
             $memberresult=mysql_query($sql);
             if (mysql_num_rows($memberresult) == 0) {
-                echo '<h3>Update a Member Profile</h3>
-                        <p>Sorry, we cannot find that member (ID#' . $id . ') in our database. Please try again.</p>
+                echo '<h3>Update a Feeding Chart</h3>
+                        <p>Sorry, we cannot find that chart (ID#' . $id . ') in our database. Please try again.</p>
                 ';
             }
             else {
@@ -29,14 +29,15 @@
                     if (isset($_POST['submit'])) {
                         $allowedFields = array(
                             'id',
-                            'firstname',
-                            'lastname',
-                            'gender',
-                            'city',
-                            'country',
-                            'phone',
-                            'worksat',
-                            'interests'
+										        'hid',
+														'feed1',
+														'feed2',
+														'forage1',
+														'forage2',
+														'supplement1',
+														'supplement2',
+														'supplement3',
+										        'instructions'
                         );
                         
                         if($row['retired'] == 1) {
@@ -61,9 +62,9 @@
                                 if ($value == $row[$key]) {echo '<font color="green">This value is still the same!</font><br /><br />';}
                                 else {
                                     echo '<font color="red" size="2"><b>We should update this!</b></font><br /><br />';
-                                    $query="UPDATE members SET $key='$value' WHERE id='$id'";
+                                    $query="UPDATE feed SET $key='$value' WHERE id='$id'";
                                     mysql_query($query)
-                                        or die ('Error updating profile: ' . mysql_error() . ' ' . $query);
+                                        or die ('Error updating chart: ' . mysql_error() . ' ' . $query);
                                     echo '<div class="salehorse"><h3>New Value:</h3>
                                                                         <p>' . $value . '</p></div><br /><br />';
                                 }
@@ -71,15 +72,15 @@
                         }
                     }
                     else {
-                                echo '<h1>Update Member Profile</h1>';
-                                include("edit_member_form.php");
+                                echo '<h1>Update Feed Chart</h1>';
+                                include("edit_feed_form.php");
                     } // end else if the form was not submitted
                 } // end while ($row = ... ($memberresult)))
             }
     } // end if no find id errors were found
     else {
-        echo '<h1>No Member Selected</h1>
-            <p>There may have been an error, or you may have found this page by mistake. Either way, a horse id must be set to continue. Please go back and try again.</p>';
+        echo '<h1>No Chart Selected</h1>
+            <p>There may have been an error, or you may have found this page by mistake. Either way, a chart id must be set to continue. Please go back and try again.</p>';
     }
 ?>
 <?php include("includes/footer.php"); ?>

@@ -1,66 +1,24 @@
-<form action="edit_horse.php" method="post">
+<form action="edit_member.php" method="post">
   <table class="table">
     <tr>
       <td>                                
-        <label for="horseName">Horse Name:</label>
-        <input type="text" name="horseName" size="30" value="<?php echo $row['horseName']; ?>" />
-
-        <label for="yob">Birth Year: </label><select class="lists" name="yob" id="yob">
-          <option value="<?php echo $row['yob'] ?>"><?php echo $row['yob'] ?></option>
-        <?php
-          $currentYear = date("Y")+1;
-          echo "<option value= '$currentYear'>$currentYear</option>";
-          $i = 0;
-          $newYear = $currentYear - 1;
-          while ($i < 30) {
-
-            if(isset($yearTemp)) {
-              echo "<option value= '$yearTemp'>$yearTemp</option>"; 
-              $yearTemp = $yearTemp - 1;
-              $i++;
-            } else { 
-              echo "<option value= '$newYear'>$newYear</option>"; 
-              $yearTemp = $newYear - 1;
-              $i++;
-            }
-          }
-        ?>
-        </select>
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" size="30" value="<?php echo $row['firstname']; ?>" />
+				<label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" size="30" value="<?php echo $row['lastname']; ?>" />
 
         <label for="gender">Gender:</label>
-        <select name="gender" id="gender">
-          <option value="<?php echo $row['gender']; ?>"><?php echo $row['gender']; ?></option>
-          <option value="Mare" width="20">Mare</option>
-          <option value="Stallion" width="20">Stallion</option>
-          <option value="Gelding" width="20">Gelding</option>
-        </select> 
+        <input type="text" name="gender" size="30" value="<?php echo $row['gender']; ?>" />
      
-        <label for="color">Colour: </label><input type="text" class="littleinput" name="color" value="<?php echo $row['color']; ?>" size="25" />
+        <label for="city">City: </label><input type="text" class="littleinput" name="city" value="<?php echo $row['city']; ?>" size="25" />
    
-        <label for="breed">Breed: </label><input type="text" class="littleinput" name="breed" value="<?php echo $row['breed']; ?>" size="25" />
+        <label for="country">Country: </label><input type="text" class="littleinput" name="country" value="<?php echo $row['country']; ?>" size="25" />
+				<label for="phone">Phone Number: </label><input type="text" name="phone" placeholder="1236547896" value="<?php echo $row['phone']; ?>" size="30" />
       </td>
       <td>    
-        <label for="sire">Sire: </label><input type="text" name="sire" value="<?php echo $row['sire']; ?>" size="30" />
+        <label for="worksat">Where Do You Work: </label><input type="text" name="worksat" value="<?php echo $row['worksat']; ?>" size="30" />
         
-        <label for="dam">Dam: </label><input type="text" name="dam" value="<?php echo $row['dam']; ?>" size="30" />
-        
-        <label for="damsire">Dam's Sire: </label><input type="text" name="damsire" value="<?php echo $row['damsire']; ?>" size="30" />
-        
-				<label for="damsire">Competing In: </label><input type="text" name="competingIn" value="<?php echo $row['competingIn']; ?>" size="30" />
-                
-        <label for="breeder">Breeder: </label><input type="text" name="breeder" value="<?php echo $row['breeder']; ?>" size="30" />
-                
-        <label for="bred">Retired </label>
-        <select name="retired" id="retired">
-          <option value="<?php echo $row['retired']; ?>">
-            <?php 
-              if($row['retired'] == 0) { echo 'No'; }
-              elseif($row['retired'] == 1) { echo 'Yes'; }
-            ?>
-          </option>
-          <option value="0" width="20">No</option>
-          <option value="1" width="20">Yes</option>
-        </select>
+        <label for="interests">Interests: </label><textarea name="interests" value="" /><?php echo $row['interests']; ?></textarea>
       </td>
     </tr>
     <tr>
